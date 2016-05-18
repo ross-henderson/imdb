@@ -1,0 +1,13 @@
+<h1>Welcome to this IMDB app</h1>
+
+
+
+<% if current_user %>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+<% else %>
+  <h3>New User?</h3>
+  <p>Click <%= link_to 'here', new_user_registration_path %> to create an account.</p>
+
+  <h3>Already have an account?</h3>
+  <p>Click <%= link_to 'here', new_user_session_path %> to log in.</p>
+<% end %>
